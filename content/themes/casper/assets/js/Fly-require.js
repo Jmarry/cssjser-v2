@@ -1,5 +1,6 @@
 /**
  * Created by 月飞 on 14-1-4.
+ * commit test
  */
 void function(){
     var doc = document;
