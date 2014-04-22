@@ -1,0 +1,37 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container">
+    <section class="content-list">
+        <header class="floatingHeader">
+            <section class="content-filter">
+                <span>博文列表</span>
+            </section>
+            <a class="button button-add" href="/admin/posts/editor/" title="少年～～来一发！">
+                <span class="hidden">New Post</span>
+            </a>
+        </header>
+        <section class="content-list-content" id="js-content-list">
+            <ol></ol>
+        </section>
+    </section>
+    <section class="content-preview" id="js-preview">
+        <header class="floatingHeader">
+            <span class="status">published</span>
+            <span class="normal">by</span>
+            <span class="author">Jmarry</span>
+            <section class="post-controls">
+                <a class="post-edit" href="#"><span class="hidden">Edit Post</span></a>
+                <a class="post-delete" href="#"><span class="hidden">Delete Post</span></a>
+            </section>
+        </header>
+        <section class="content-preview-content">
+            <div class="render-markdown">
+
+            </div>
+        </section>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script>
+    seajs.use('admin/posts');
+</script>
+{{ include ../../theme/includes/end.html }}

@@ -1,0 +1,27 @@
+{{ include ../theme/includes/head.html}}
+<div id="main">
+    <aside id="notifications"></aside>
+    <section class="login-wrapper">
+        <form id="login" method="post">
+            <aside class="logo-wrap">
+                <a href="/" class="logo">
+                    <img src="/image/logo-white.png" width="120" height="135"/>
+                </a>
+            </aside>
+            <div class="form-wrap">
+                <div class="email-wrap">
+                    <input class="email" type="email" name="email" placeholder="Email Address" autofocus/>
+                </div>
+                <div class="password-wrap">
+                    <input class="password" type="password" name="password" placeholder="Password"/>
+                </div>
+                <button class="btn-save" type="submit">Log in</button>
+            </div>
+        </form>
+    </section>
+</div>
+{{ include ../theme/includes/foot.html}}
+<script>
+    seajs.use('login');
+</script>
+{{ include ../theme/includes/end.html}}

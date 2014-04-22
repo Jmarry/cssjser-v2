@@ -1,0 +1,53 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container wrapper">
+    <aside class="settings-sidebar">
+        <header><h1 class="title">设置</h1></header>
+        <nav class="setting-menu">
+            <ul>
+                <li class="general active">
+                    <a href="#">基本设置</a>
+                </li>
+                <li class="users">
+                    <a href="/admin/settings/user/">用户设置</a>
+                </li>
+                <li class="basic">
+                    <a href="/admin/settings/basic/">站点设置</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="settings-content">
+        <header>
+            <h2 class="title">基本设置</h2>
+            <section class="page-actions">
+                <button class="button-save">保存</button>
+            </section>
+        </header>
+        <section class="content">
+            <form id="setting-general">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="blog-title">博客名称</label>
+                        <input id="blog-title" name="blog[title]" type="text" value="{{=Settings.title}}"/>
+                        <p>the name for your blog</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-description">博客描述</label>
+                        <textarea id="blog-description">{{=Settings.description}}</textarea>
+                        <p>the description for your blog</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="blog-email">博客邮箱</label>
+                        <input id="blog-email" name="blog[email]" type="text" value="{{=Settings.email||''}}"/>
+                        <p>the email for your email</p>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script>
+    seajs.use('admin/general');
+</script>
+{{ include ../../theme/includes/end.html }}

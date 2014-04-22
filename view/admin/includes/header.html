@@ -1,0 +1,35 @@
+{{ include ../../theme/includes/head.html }}
+<header class="navbar" id="global-header">
+    <a class="website-logo" href="{{=domain}}" title="返回首页">
+        <span class="hidden">CssJser</span>
+    </a>
+    <nav id="global-nav">
+        <ul class="main-nav">
+            {{ Object.keys(adminNavBar).forEach(function(key){ }}
+            <li class="{{=adminNavBar[key].navClass}}{{ if(adminNavBar[key].selected){ }} active{{ } }}">
+                <a href="{{=adminNavBar[key].path}}">{{=adminNavBar[key].name}}</a>
+            </li>
+            {{ }) }}
+            <li id="userMenu" class="sub-nav">
+                <a class="drop-down" data-toggle="ul.overlay" href="#">
+                    <img class="avatar" src="{{=currentUser.avatar}}&s=18" alt="Avatar"/>
+                    <span class="name">{{=currentUser.name}}</span>
+                </a>
+                <ul class="overlay" style="display: none;">
+                    <li class="user-menu-profile">
+                        <a href="/admin/settings/user">个人资料</a>
+                    </li>
+                    <li class="basic">
+                        <a href="/admin/settings/basic/">站点设置</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="logout">
+                        <a href="/logout">退出登录</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="main">
+    <aside id="notifications"></aside>

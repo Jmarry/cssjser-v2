@@ -1,0 +1,117 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+q:before, q:after {
+    content: ''
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.button,button,input[type="button"]{
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 35px;
+    width: auto;
+    display: inline-block;
+    padding: 0.9em 1.37em;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: none;
+    border-radius: 0.2em;
+    border: rgba(0, 0, 0, 0.05) 0.1em solid;
+    -webkit-transition: background 0.3s ease, border-color 0.3s ease;
+    -moz-transition: background 0.3s ease, border-color 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="search"]:focus,
+form input[type="tel"]:focus,
+form input[type="url"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="month"]:focus,
+form input[type="week"]:focus,
+form input[type="time"]:focus,
+form input[type="datetime"]:focus,
+form input[type="datetime-local"]:focus,
+form textarea:focus {outline: none;outline-width: 0;}
+
+legend {
+    color: #000
+}
+
+/*base*/
+body{font: normal 81.2%/1.65 "Open Sans",'microsoft yahei',sans-serif}
+a {color: #5ba4e5;text-decoration: none;-webkit-transition: color 0.15s ease;-moz-transition: color 0.15s ease;transition: color 0.15s ease;}
+.hidden {text-indent: -9999px;visibility: hidden;display: none;}
+
+/*notification*/
+#notifications{position: fixed;left: 0;right: 0;top:60px;z-index: 1000}
+.notification{width: 100%;min-height: 40px;padding: 10px 43px 10px 57px;margin: 0 0 15px 0;background: #5ba4e5;box-sizing: border-box;color: rgba(255,255,255,0.9);position: relative;}
+.notification:before{font-family: FontAwesome;font-weight: normal;font-style: normal;display: inline-block;line-height: 1;font-size: 1.2em;position: absolute;left: 0;top: 0;content: "\f10c";background: rgba(0,0,0,0.1);text-align: center;width: 44px;height: 100%;padding: 14px 15px;box-sizing: border-box;}
+.notification .close{text-decoration: underline;display: inline-block;color: rgba(255, 255, 255, 0.6);cursor: pointer;}
+.notification .close:after{font-family: FontAwesome;font-weight: normal;font-style: normal;display: inline-block;line-height: 1;vertical-align: baseline;font-size: 1.2em;content: "\f057";z-index: 2;padding: 6px;position: absolute;top: 8px;right: 9px;}
+.notification .close:hover{color: #fff;}
+.notification-error{background: #e25440;}
+.notification-error:before{content: "\f071";}
+.notification-success{background: #9fbb58;}
+.notification-success:before{content: "\f058";}

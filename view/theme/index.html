@@ -1,0 +1,32 @@
+{{ include ./includes/header.html }}
+{{
+posts.forEach(function(item){
+}}
+<article class="post">
+    <header class="post-header">
+        <h2 class="post-title">
+            <a href="/blogs/{{=item.slug}}/">{{=item.title}}</a><span class="post-views"><i class="icon-plus p-l-5 p-r-5"></i>{{=item.views}}</span>
+        </h2>
+        <span class="post-meta"><time><i class="icon-time p-r-5"></i>{{=item.time}}</time> {{ if(item.tags.length){ }}
+            <i class="icon-tags p-l-5 p-r-5"></i>{{ item.tags.forEach(function(tag,i){ }}
+            <a href="/tag/{{=tag.name}}/">{{=tag.name}}</a>
+            {{ })} }}
+    </header>
+    <section class="post-excerpt">
+        <p>{{=item.summary}}</p>
+        <div class="post-more-link-wrapper">
+            <a class="post-more-link" href="/blogs/{{=item.slug}}">Read More</a>
+        </div>
+    </section>
+</article>
+{{});}}
+<nav class="pagination">
+    {{ if(page>0){ }}
+    <a class="newer-posts" href="{{=page===1?'?index':'?page='+(page-2)}}">Newer posts »</a>
+    {{ } }}
+    {{ if(page < pages-1){ }}
+    <a class="older-posts" href="?page={{=page+2}}">Older posts »</a>
+    {{ } }}
+</nav>
+{{ include ./includes/footer.html }}
+{{ include ./includes/end.html }}

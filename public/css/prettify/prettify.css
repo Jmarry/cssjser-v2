@@ -1,0 +1,82 @@
+/* Pretty printing styles. Used with prettify.js.
+ *
+ * Name:	Stanley Ng
+ * Email: 	stanleyhlng@googlegroups.com
+ *
+ * Credits:
+ * https://github.com/chriskempson/tomorrow-theme
+ */
+.prettyprint .pln {
+    color: #cccccc; }
+
+.prettyprint .str {
+    color: #99cc99; }
+
+.prettyprint .kwd {
+    color: #cc99cc; }
+
+.prettyprint .com {
+    color: #999999;
+    font-style: italic; }
+
+.prettyprint .typ {
+    color: #f99157; }
+
+.prettyprint .lit {
+    color: #f99157; }
+
+.prettyprint .pun {
+    color: #cccccc; }
+
+.prettyprint .opn {
+    color: #cccccc; }
+
+.prettyprint .clo {
+    color: #cccccc; }
+
+.prettyprint .tag {
+    color: #f2777a; }
+
+.prettyprint .atn {
+    color: #f99157; }
+
+.prettyprint .atv {
+    color: #66cccc; }
+
+.prettyprint .dec {
+    color: #f99157; }
+
+.prettyprint .var {
+    color: #f2777a; }
+
+.prettyprint .fun {
+    color: #6699cc; }
+
+pre,code,pre code{
+    font-family: Consolas,"Open Sans",monospace;
+    white-space: pre-wrap;
+}
+/* Put a border around prettyprinted code snippets. */
+code.prettyprint{
+    background-color: #2d2d2d;
+    padding: 2px;
+}
+pre.prettyprint {
+    background-color: #2d2d2d;
+    padding: 10px;
+    border: 1px solid #E1E1E8;
+    font-size: 16px;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+    color: #999999;
+    padding-left: 0;
+    margin-left: 45px;
+}
+
+ol.linenums li {
+    line-height: 18px;
+    padding-left: 12px;
+    margin: 0;
+}

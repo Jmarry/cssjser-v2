@@ -1,0 +1,66 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container wrapper">
+    <aside class="settings-sidebar">
+        <header><h1 class="title">设置</h1></header>
+        <nav class="setting-menu">
+            <ul>
+                <li class="general">
+                    <a href="/admin/settings/">基本设置</a>
+                </li>
+                <li class="users active">
+                    <a href="#">用户设置</a>
+                </li>
+                <li class="basic">
+                    <a href="/admin/settings/basic/">站点设置</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="settings-content">
+        <header>
+            <h2 class="title">用户设置</h2>
+            <section class="page-actions">
+                <button class="button-save">保存</button>
+            </section>
+        </header>
+        <section class="content">
+            <form id="setting-general">
+                <fieldset class="user-info">
+                    <div class="form-group">
+                        <label for="user-name">昵称</label>
+                        <input id="user-name" name="user[name]" type="text" value="{{=UserInfo.name}}"/>
+                        <p>your name</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">邮箱</label>
+                        <input id="user-email" name="user[email]" type="text" value="{{=UserInfo.email}}"/>
+                        <p>your email and can create your avatar</p>
+                    </div>
+                    <hr/>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="old-pwd">原密码</label>
+                        <input id="old-pwd" type="password" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-pwd">新密码</label>
+                        <input id="new-pwd" type="password" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="verify-pwd">确认密码</label>
+                        <input id="verify-pwd" type="password" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <button class="button-delete button-change-pwd">修改密码</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script>
+    seajs.use('admin/users');
+</script>
+{{ include ../../theme/includes/end.html }}

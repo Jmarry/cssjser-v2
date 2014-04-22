@@ -1,0 +1,31 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container">
+    <section id="upload">
+        <section class="upload-content upload-has-list">
+            <form action="http://up.qiniu.com/" class="dropzone dz-clickable" id="drop-area">
+                <input name="token" type="hidden" value="{{=token}}">
+                <div class="dz-default dz-message">
+                    <span>Drop files here to upload</span>
+                </div>
+            </form>
+        </section>
+        <section class="upload-operate" style="display: none;">
+            <span class="paste-upload"><i class="icon-hand-down"></i> 从剪切板复制图片</span>
+        </section>
+    </section>
+    <section class="img-container">
+        <div class="img-list-container">
+            <ul class="img-list" id="J_imgList"></ul>
+        </div>
+        <section class="drop-more" id="J_drop_more">
+            <i class="icon-circle-arrow-down"></i> 查看更多上传记录
+        </section>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script src="/js/utils/dropzone.js"></script>
+<script>
+    Dropzone.autoDiscover = false;
+    seajs.use('admin/images');
+</script>
+{{ include ../../theme/includes/end.html }}

@@ -1,0 +1,28 @@
+body{color: #7d878a;background: #242628;}
+#main{position: absolute;top: 15px;right: 15px;bottom: 0;left: 15px;padding: 0;color: #7d878a;background: #242628;}
+#main .login-wrapper,#main .register-wrapper{max-width: 530px;height: 90%;margin: 0 auto;display: table;}
+
+#notifications{top:20px;z-index: 1000;}
+/*login*/
+#login,#register{color: #a5acae;display: table-cell;vertical-align: middle;max-width: 530px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+#login .logo-wrap,#register .logo-wrap{clear: both;text-align: center;margin-bottom: 20px;}
+#login .form-wrap div,#register .form-wrap div{position: relative;margin: 0 0 5px 0;background: #3c4043;float: left}
+#login .form-wrap .logo-wrap{clear: both;}
+#login .form-wrap .email-wrap,#register .form-wrap .email-wrap{margin-right: 3px;border-radius: 2px 0 0 2px;}
+#login .form-wrap .email-wrap:before,#register .form-wrap .email-wrap:before{font-family: FontAwesome;font-weight: normal;font-style: normal;display: inline-block;line-height: 1;vertical-align: baseline;font-size: 12px;position:absolute;left:8px;top:11px;content: "\f0e0";z-index: 2;}
+#login .form-wrap .password-wrap,#register .form-wrap .password-wrap{border-radius: 0 2px 2px 0;}
+#login .form-wrap .password-wrap:before,#register .form-wrap .password-wrap:before{font-family: FontAwesome;font-weight: normal;font-style: normal;display: inline-block;line-height: 1;vertical-align: baseline;font-size: 12px;position:absolute;left:8px;top:11px;content: "\f084";z-index: 2;}
+#login .form-wrap input,#register .form-wrap input{display: inline-block;clear: both;margin: 0;padding: 8px 0 8px 8px;width: 216px;position: relative;border: none;color: #fff;font-size: 1.1em;font-weight: 200;background: transparent;box-shadow: none;-webkit-transition: background ease 0.25s;-moz-transition: background ease 0.25s;transition: background ease 0.25s;}
+#login .form-wrap input:focus,#register .form-wrap input:focus{background: #484c50;}
+#login .form-wrap .email-wrap .email,#register .form-wrap .email-wrap .email{padding-left: 28px;border-radius: 2px 0 0 2px;}
+#login .form-wrap .password-wrap .password,#register .form-wrap .password-wrap .password{padding-left: 28px;border-radius: 0 2px 2px 0;}
+#login .form-wrap .btn-save,#register .form-wrap .btn-save{width: 85px;height: 36px;margin: 0 0 0 10px;padding: 0.5em 1.37em;min-height: 30px;min-width: 80px;box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset;background: #5ba4e5;}
+#login .form-wrap .btn-save:hover,#register .form-wrap .btn-save:hover{background: #2f8cde;}
+
+/*register*/
+#register .form-wrap .btn-save{width: 100%;margin-left: 0;}
+#register .form-wrap .email-wrap{margin-right: 0;}
+#register .form-wrap .name-wrap:before{font-family: FontAwesome;font-weight: normal;font-style: normal;display: inline-block;line-height: 1;vertical-align: baseline;font-size: 14px;position:absolute;left:8px;top:11px;content: "\f007";z-index: 2;}
+#register .form-wrap>div{margin-bottom: 10px;float: none;}
+#register .form-wrap>div input{width: 280px;border-radius: 2px;}
+#register .form-wrap .name-wrap .name{padding-left: 28px;}

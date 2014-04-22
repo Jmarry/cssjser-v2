@@ -1,0 +1,30 @@
+{{ include ../theme/includes/head.html}}
+<div id="main">
+    <aside id="notifications"></aside>
+    <section class="register-wrapper">
+        <form id="register" method="post">
+            <aside class="logo-wrap">
+                <a href="/" class="logo">
+                    <img src="/image/logo-white.png" width="120" height="135"/>
+                </a>
+            </aside>
+            <div class="form-wrap">
+                <div class="name-wrap">
+                    <input class="name" type="text" name="name" placeholder="Full Name" autofocus/>
+                </div>
+                <div class="email-wrap">
+                    <input class="email" type="email" name="email" placeholder="Email Address"/>
+                </div>
+                <div class="password-wrap">
+                    <input class="password" type="password" name="password" placeholder="Password"/>
+                </div>
+                <button class="btn-save" type="submit">Register</button>
+            </div>
+        </form>
+    </section>
+</div>
+{{ include ../theme/includes/foot.html}}
+<script>
+    seajs.use('register');
+</script>
+{{ include ../theme/includes/end.html}}

@@ -1,0 +1,53 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container post-editor">
+    <header>
+        <section class="post-title">
+            <input type="text" id="post-title" placeholder="标题" tabindex="1" value="{{=post.title||''}}"/>
+        </section>
+    </header>
+    <section class="content-list">
+        <form id="post">
+            <fieldset>
+                <div class="form-group">
+                    <label for="postTags"><i class="icon-tag"></i><span class="hidden">标签</span></label>
+                    {{
+                    var tags=[],rtnTags;
+                    post.tags&&post.tags.forEach(function(item){
+                        tags.push(item.name);
+                    })
+                    rtnTags=tags.join(', ');
+                    }}
+                    <input id="postTags" type="text" value="{{=rtnTags}}"/>
+                </div>
+                <div class="form-group">
+                    <label for="postUrl"><i class="icon-link"></i><span class="hidden">链接</span></label>
+                    <input id="postUrl" type="text" value="{{=post.slug||''}}"/>
+                    <p>{{=domain}}posts/<span class="slug"></span></p>
+                </div>
+            </fieldset>
+            <input id="postId" type="hidden" value="{{=post._id||''}}"/>
+            <button class="button-save button-post">{{=post._id?'更新':'保存'}}</button>
+        </form>
+    </section>
+    <section class="content-preview">
+        <div class="post-content">
+            <section class="entry-markdown active">
+                <header class="floatingHeader">markdown</header>
+                <div class="entry-markdown-content">
+                    <textarea id="entry-markdown">{{=post.markdown||''}}</textarea>
+                </div>
+            </section>
+            <section class="entry-preview">
+                <header class="floatingHeader">preview</header>
+                <div class="entry-preview-content">
+                    <section class="render-markdown"></section>
+                </div>
+            </section>
+        </div>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script>
+    seajs.use('admin/editor');
+</script>
+{{ include ../../theme/includes/end.html }}

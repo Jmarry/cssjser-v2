@@ -1,0 +1,66 @@
+{{ include ../includes/header.html }}
+<section class="content-view-container wrapper">
+    <aside class="settings-sidebar">
+        <header><h1 class="title">设置</h1></header>
+        <nav class="setting-menu">
+            <ul>
+                <li class="general">
+                    <a href="/admin/settings/">基本设置</a>
+                </li>
+                <li class="users">
+                    <a href="/admin/settings/user/">用户设置</a>
+                </li>
+                <li class="basic active">
+                    <a href="#">站点设置</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <section class="settings-content">
+        <header>
+            <h2 class="title">站点设置</h2>
+            <section class="page-actions">
+                <button class="button-save">保存</button>
+            </section>
+        </header>
+        <section class="content">
+            <form id="setting-general">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="site-domain">站点域名</label>
+                        <input id="site-domain" name="site[domain]" type="text" value="{{=config.domain}}"/>
+                        <p>the url for your site,ep:http://localhost:8000</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="site-port">端口号</label>
+                        <input id="site-port" name="site[port]" type="text" value="{{=config.port}}"/>
+                        <p>the port for your site,mast restart your service</p>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="site-db-host">MongoDB设置</label>
+                        <input id="site-db-host" name="site[db-host]" type="text" value="{{=config.db.host}}" class="length-m" placeholder="host"/>
+                        <input id="site-db-port" name="site[db-port]" type="text" value="{{=config.db.port}}" class="length-s" placeholder="port"/>
+                        <input id="site-db-database" name="site[db-database]" type="text" value="{{=config.db.database}}" placeholder="database" class="length-s"/>
+                        <input id="site-db-user" name="site[db-user]" type="text" value="{{=config.db.user}}" placeholder="user" class="length-s"/>
+                        <input id="site-db-password" name="site[db-password]" type="text" value="{{=config.db.pass}}" placeholder="password" class="length-s"/>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="site-db-host">七牛CDN设置</label>
+                        <input id="site-qiniu-ACCESS_KEY" name="site[qiniu-ACCESS_KEY]" type="text" value="{{=config.qiNiu.ACCESS_KEY}}" class="length-m" placeholder="ACCESS_KEY"/>
+                        <input id="site-qiniu-SECRET_KEY" name="site[qiniu-SECRET_KEY]" type="text" value="{{=config.qiNiu.SECRET_KEY}}" class="length-m" placeholder="SECRET_KEY"/>
+                        <input id="site-qiniu-bucketName" name="site[db-database]" type="text" value="{{=config.qiNiu.bucketName}}" placeholder="bucketName" class="length-s"/>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </section>
+</section>
+{{ include ../includes/footer.html }}
+<script>
+    seajs.use('admin/basic');
+</script>
+{{ include ../../theme/includes/end.html }}
