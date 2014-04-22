@@ -27,7 +27,7 @@ var rootPath = process.cwd(),
                 bucketName: 'cssjser'
             }
         },
-        "test": {
+        "production": {
             db: {
                 host: 'localhost',
                 port: 27017,
@@ -38,27 +38,6 @@ var rootPath = process.cwd(),
             port: 18080,
             path: rootPath,
             domain: 'http://cssjser.com/',
-            bae:{
-                ApiKey:'qrm2xFoRsCQhock5pSfeKTCB'
-            },
-            qiNiu: {
-                ACCESS_KEY: 'GsImxo694-Vyx8yfRtF8mP4I8rvfNHS6wkbiu3KX',
-                SECRET_KEY: 'AUxi-exzT7JOmwbVHOJlRVgs9Shs7WA5f6E9o7I1',
-                bucketName: 'cssjser',
-                host: 'http://cssjser.qiniudn.com/'
-            }
-        },
-        "production": {
-            db: {
-                host: 'mongo.duapp.com',
-                port: 8908,
-                database: 'VCduOBSpUKxQhhYVOMIe',
-                user: 'qrm2xFoRsCQhock5pSfeKTCB',
-                pass: '8kDt5lPPGzwfwYHRiHZywwFpZbcgMIcD'
-            },
-            port: 18080,
-            path: rootPath,
-            domain: 'http://cssjser.duapp.com/',
             bae:{
                 ApiKey:'qrm2xFoRsCQhock5pSfeKTCB'
             },
