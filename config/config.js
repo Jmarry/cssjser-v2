@@ -35,7 +35,7 @@ var rootPath = process.cwd(),
                 user: '',
                 pass: ''
             },
-            port: 18080,
+            port: 8000,
             path: rootPath,
             domain: 'http://cssjser.com/',
             bae:{
