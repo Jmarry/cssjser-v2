@@ -26,6 +26,7 @@ exports.setSettings=function(req,res,next){
                 return next(err);
             }
             req.Data.success=true;
+            req.Data.settings=rtn;
             next();
         });
     })

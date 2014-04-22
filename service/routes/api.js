@@ -8,7 +8,10 @@ function showData(req,res,next){
 }
 module.exports=function(app){
     //api
-    app.post('/api/basicSetting/update',api.apiAuth,api.basicSettings.setSettings,showData);
+    app.post('/api/basicSetting/update',api.apiAuth,api.basicSettings.setSettings,function(req,res,next){
+        app.locals(req.Data.settings);
+        next();
+    },showData);
     app.post('/api/basicSite/update',api.apiAuth,api.basicSettings.update,showData);
     app.post('/api/user/update',api.apiAuth,api.user.update,showData);
     app.post('/api/user/changePassword',api.apiAuth,api.user.changePassword,showData);
