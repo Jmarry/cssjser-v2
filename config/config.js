@@ -19,12 +19,12 @@ var rootPath = process.cwd(),
             path: rootPath,
             domain: 'http://localhost:8000/',
             bae:{
-                ApiKey:'qrm2xFoRsCQhock5pSfeKTCB'
+                ApiKey:''
             },
             qiNiu: {
-                ACCESS_KEY: 'GsImxo694-Vyx8yfRtF8mP4I8rvfNHS6wkbiu3KX',
-                SECRET_KEY: 'AUxi-exzT7JOmwbVHOJlRVgs9Shs7WA5f6E9o7I1',
-                bucketName: 'cssjser'
+                ACCESS_KEY: '',
+                SECRET_KEY: '',
+                bucketName: ''
             }
         },
         "production": {
@@ -39,13 +39,12 @@ var rootPath = process.cwd(),
             path: rootPath,
             domain: 'http://cssjser.com/',
             bae:{
-                ApiKey:'qrm2xFoRsCQhock5pSfeKTCB'
+                ApiKey:''
             },
             qiNiu: {
-                ACCESS_KEY: 'GsImxo694-Vyx8yfRtF8mP4I8rvfNHS6wkbiu3KX',
-                SECRET_KEY: 'AUxi-exzT7JOmwbVHOJlRVgs9Shs7WA5f6E9o7I1',
-                bucketName: 'cssjser',
-                host: 'http://cssjser.qiniudn.com/'
+                ACCESS_KEY: '',
+                SECRET_KEY: '',
+                bucketName: ''
             }
         }
     };
