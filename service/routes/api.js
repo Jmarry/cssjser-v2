@@ -9,7 +9,7 @@ function showData(req,res,next){
 module.exports=function(app){
     //api
     app.post('/api/basicSetting/update',api.apiAuth,api.basicSettings.setSettings,function(req,res,next){
-        app.locals(req.Data.settings);
+        app.locals({blog:req.Data.settings});
         next();
     },showData);
     app.post('/api/basicSite/update',api.apiAuth,api.basicSettings.update,showData);
